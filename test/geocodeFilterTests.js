@@ -1,4 +1,4 @@
-var geocodeFilter = require('../src/GeocodeFilter');
+var geocodeFilter = require('../src/geocodeFilter');
 
 exports.testOKGeocode = function(test) {
     // pass in a dummy object that has all the things we're looking for
