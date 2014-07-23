@@ -18,3 +18,6 @@ node src/server.js
 To run tests, from root project directory:
 nodeunit test/<testfile>
 
+
+Note;
+You may need to use npm to install 'geocoder': npm install geocoder
