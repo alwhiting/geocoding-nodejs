@@ -31,6 +31,7 @@ var testAddresses = [
 ];
 
 var expectedAddresses = [
+    'Address',
     '3895 Church Street, Clarkston, GA 30021, USA',
     '7665 Honey Abbey, Koggiung, MA',
     '9974 Round Bluff Villas, Hemp, NH',
@@ -50,7 +51,8 @@ var expectedAddresses = [
     '180 Foggy Lane, Line Store, MS',
     '4535 Silent Freeway, Bamboo, KY',
     '6109 Bright Loop, Gaysport, WV',
-    '123 excess white space street'
+    '123 excess white space street',
+    '-982.452 also discarded'
 ];
 
 exports.testLoadValidAddresses = function(test) {
