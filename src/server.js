@@ -19,16 +19,16 @@ var addressList = new AddressList(fs.readFileSync(addressListFile).toString().sp
 // it will prevent having to wait for the google api every time we want to view the results
 // also this prevents us from hammering the google api and using up our requests for the day
 // in a proper implementation this should probably be refreshed based on some event or time
-var finishedCallback = function(geocodeResults) {
-    try {
+var finishedCallback = function(err, geocodeResults) {
+    if (err) {
+        errMsg = err.toString();
+        console.log(errMsg);
+    } else {
         geocodes = geocodeResults;
         console.log('Finished geocoding addresses; ' + geocodes.length + ' geocodes retained.');
-    } catch (ex) {
-        errMsg = ex.toString();
-        console.log(ex);
     }
 }
-geocodeAddresses.geocodeAddresses(addressList.getAddressList(), finishedCallback);
+geocodeAddresses.geocode(addressList.getAddressList(), finishedCallback);
 
 // super simple server
 http.createServer(function(req, resp) {
