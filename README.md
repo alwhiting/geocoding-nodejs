@@ -13,14 +13,14 @@ Sources in src/ directory; unit tests in the test/ directory. Unit tests use
 'nodeunit'.
 
 To run main app, from root project directory:
-node src/server.js
+`node src/server.js`
 
 To run tests, from root project directory:
-nodeunit test/<testfile>
+`nodeunit test/<testfile>`
 
 
 Note;
-You may need to use npm to install 'geocoder': npm install geocoder
+You may need to use npm to install 'geocoder': `npm install geocoder`
 
 Also, use of the Google API is subject to daily limits, so it's possible to
 be locked out for the day if this app is used frequently over a day.
