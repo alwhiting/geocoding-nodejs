@@ -10,7 +10,7 @@ production bit of code but as this is a test I thought it might be good to see
 some events happening.
 
 Sources in src/ directory; unit tests in the test/ directory. Unit tests use
-'noteunit'.
+'nodeunit'.
 
 To run main app, from root project directory:
 node src/server.js

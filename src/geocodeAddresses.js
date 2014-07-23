@@ -1,7 +1,7 @@
 /*
  * Processes addresses into geocodes.
- * Processes the addresses in a serial manner due to the need
- * to delay subsequent calls to the API due to its rate limiting.
+ * Processes the addresses in a serial manner due to the need to delay
+ * subsequent calls to the API because of rate limiting.
  */
 var geocoder = require('geocoder');
 var geocodeFilter = require('./geocodeFilter');
@@ -40,7 +40,7 @@ function processAddress(address, finishedCallback, geocodes, retries) {
             console.log('No results for "%s".', address);
             processAddress(addresses.shift(), finishedCallback, geocodes, 0);
 
-        // hit the api query limit, wait 2 seconds up to 3 times
+        // hit the api query limit, wait 2 seconds up to 3 times, fairly simple rate limiting
         } else if (res.status == 'OVER_QUERY_LIMIT') {
             if (retries < maxRetries) {
                 console.log('Hit API rate limit, delaying 2 seconds; retry: ' + (retries + 1));
