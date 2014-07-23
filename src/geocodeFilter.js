@@ -1,7 +1,6 @@
 /*
  * Applies our filter requirements to geocodes.
  */
-
 exports.validateGeocode = function(geocode) {
     return geocode instanceof Object
         && geocode.results instanceof Array

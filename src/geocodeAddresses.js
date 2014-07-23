@@ -1,9 +1,15 @@
+/*
+ * Processes addresses into geocodes.
+ * Processes the addresses in a serial manner due to the need
+ * to delay subsequent calls to the API due to its rate limiting.
+ */
 var geocoder = require('geocoder');
 var geocodeFilter = require('./geocodeFilter');
 
 var addresses = [];
 var maxRetries = 3;
 
+// processes all addresses and calls finishedCallback(err, geocodes)
 exports.geocode = function(addressesArray, finishedCallback) {
     addresses = addressesArray;
     processAddress(addresses.shift(), finishedCallback, [], 0);

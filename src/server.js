@@ -15,10 +15,10 @@ var errMsg = null;
 // init
 var addressList = new AddressList(fs.readFileSync(addressListFile).toString().split("\n"));
 
-// as part of the init we'll do all the geocoding right away
-// it will prevent having to wait for the google api every time we want to view the results
-// also this prevents us from hammering the google api and using up our requests for the day
-// in a proper implementation this should probably be refreshed based on some event or time
+// As part of the init we'll do all the geocoding right away;
+// it will prevent having to wait for the google api every time we want to get the results
+// also this prevents us from hammering the google api and using up our requests for the day.
+// In a proper implementation this should probably be refreshed based on some event or time.
 var finishedCallback = function(err, geocodeResults) {
     if (err) {
         errMsg = err.toString();

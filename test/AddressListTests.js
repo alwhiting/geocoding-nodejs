@@ -1,7 +1,3 @@
-/*
- * nodeunit unit tests for AddressList
- */
-
 var AddressList = require('../src/AddressList.js');
 
 // a subset of the given input and some extra junk that could be problematic
