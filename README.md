@@ -21,3 +21,6 @@ nodeunit test/<testfile>
 
 Note;
 You may need to use npm to install 'geocoder': npm install geocoder
+
+Also, use of the Google API is subject to daily limits, so it's possible to
+be locked out for the day if this app is used frequently over a day.
