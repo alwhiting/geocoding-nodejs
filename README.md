@@ -11,3 +11,10 @@ some events happening.
 
 Sources in src/ directory; unit tests in the test/ directory. Unit tests use
 'noteunit'.
+
+To run main app, from root project directory:
+node src/server.js
+
+To run tests, from root project directory:
+nodeunit test/<testfile>
+
